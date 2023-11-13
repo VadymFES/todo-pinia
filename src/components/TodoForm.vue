@@ -10,7 +10,7 @@ function addItemAndClear(item) {
     if (item.length === 0) {
         return;
     }
-    todoListStore.addTodo(item); // Corrected line
+    todoListStore.addTodo(item);
     todo.value = '';
 }
 </script>

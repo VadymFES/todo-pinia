@@ -11,15 +11,16 @@ const { toggleCompleted, deleteTodo } = store;
 
 <template>
     <div v-for="todo in todoList" :key="todo.id" class="item">
-    <div class="content">
-        <span :class="{ completed: todo.comleted }">{{ todo.item }}</span>
-        <div>
-            <span @click.stop="toggleCompleted(todo.id)">&#10004;</span>
-            <span @click="deleteTodo(todo.id)" class="x">&#10060;</span>
+        <div class="content">
+            <span :class="{ completed: todo.complete }">{{ todo.item }}</span>
+            <div>
+                <span @click.stop="toggleCompleted(todo.id)">&#10004;</span>
+                <span @click="deleteTodo(todo.id)" class="x">&#10060;</span>
+            </div>
         </div>
     </div>
-    </div>
 </template>
+
 
 <style scoped> 
 span {
@@ -44,4 +45,3 @@ span {
     text-decoration: line-through;
 } 
 </style>
-```
